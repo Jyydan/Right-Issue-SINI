@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Laporan riset eksklusif Right Issue $SINI (PT Singaraja Putra Tbk) oleh Anthropic Stock. Analisis mendalam aksi korporasi, TERP calculator, dan strategi entry.">
+    <title>Riset Eksklusif $SINI Right Issue — Anthropic Stock</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
+    <style>
+        :root {
+            --bg: #030712;
+            --bg-card: rgba(17, 24, 39, 0.65);
+            --bg-card-alt: rgba(31, 41, 55, 0.45);
+            --bg-elevated: #1f2937;
+            --gold: #facc15;
+            --gold-dim: rgba(250, 204, 21, 0.15);
+            --blue: #38bdf8;
+            --blue-dim: rgba(56, 189, 248, 0.15);
+            --green: #34d399;
+            --green-dim: rgba(52, 211, 153, 0.15);
+            --red: #fb7185;
+            --red-dim: rgba(251, 113, 133, 0.15);
+            --amber: #fbbf24;
+            --teal: #2dd4bf;
+            --text: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --text-muted: #64748b;
+            --border: rgba(255,255,255,0.08);
+            --border-light: rgba(255,255,255,0.15);
+            --radius: 20px;
+            --radius-sm: 12px;
+            --shadow: 0 10px 40px rgba(0,0,0,0.5);
+            --glow-blue: 0 0 20px rgba(56, 189, 248, 0.4);
+            --glow-gold: 0 0 20px rgba(250, 204, 21, 0.4);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.75;
+            font-size: 15px;
+            font-weight: 400;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Noise & Grid overlay */
+        body::before {
+            content: '';
+            position: fixed; inset: 0;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            opacity: 0.025;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Stack Sans Notch', 'Plus Jakarta Sans', sans-serif; font-weight: 700; line-height: 1.3; }
+        .mono { font-family: 'IBM Plex Mono', monospace; }
+
+        a { color: var(--blue); text-decoration: none; transition: 0.3s; }
+        a:hover { color: var(--text); text-decoration: none; text-shadow: var(--glow-blue); }
+
+        .container { max-width: 880px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 1; }
+
+        /* Advanced Scroll Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px) scale(0.95);
+            transition: opacity 0.8s cubic-bezier(0.2, 1, 0.3, 1), transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        /* SECTION 0: Navbar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(10, 15, 26, 0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+            padding: 12px 0;
+        }
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-brand {
+            font-family: 'Stack Sans Notch', 'Plus Jakarta Sans', sans-serif;
+            font-weight: 800;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: -0.3px;
+        }
+        .nav-brand i { color: var(--blue); font-size: 1.1rem; }
+        .badge-exclusive {
+            background: var(--gold-dim);
+            border: 1px solid rgba(245,158,11,0.35);
+            color: var(--gold);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        /* Sections */
+        section { padding: 56px 0; }
+
+        .section-label {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: var(--blue-dim);
+            color: var(--blue);
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            letter-spacing: 0.2px;
+        }
+
+        .section-title {
+            font-size: 1.7rem;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 32px;
+            max-width: 600px;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .card::before {
+            content: ''; position: absolute; inset: 0;
+            background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,0.06), transparent 40%);
+            opacity: 0; transition: opacity 0.4s; pointer-events: none;
+        }
+        .card:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: var(--shadow), 0 0 20px rgba(56, 189, 248, 0.15);
+            border-color: rgba(255,255,255,0.25);
+            z-index: 10;
+        }
+        .card:hover::before { opacity: 1; }
+
+        /* Grids */
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+        .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+        /* SECTION 1: Hero with parallax */
+        .hero {
+            padding: 80px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 600px 400px at 50% 20%, rgba(245,158,11,0.08), transparent),
+                radial-gradient(ellipse 400px 300px at 70% 80%, rgba(59,130,246,0.06), transparent);
+            z-index: -1;
+            will-change: transform;
+        }
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 48px 48px;
+            z-index: -1;
+            will-change: transform;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #f59e0b, #fbbf24, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+            letter-spacing: -1px;
+        }
+        .hero-ticker {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+        .hero-desc {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            max-width: 620px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+
+        .stat-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+        .stat-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 20px 16px;
+            text-align: center;
+        }
+        .stat-box .s-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        .stat-box .s-val {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 1.35rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .stat-box .s-sub {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        .c-blue { color: var(--blue); }
+        .c-gold { color: var(--gold); }
+        .c-red { color: var(--red); }
+        .c-green { color: var(--green); }
+        .c-teal { color: var(--teal); }
+        .c-muted { color: var(--text-secondary); }
+
+        /* Story Cards */
+        .story-card {
+            display: flex;
+            flex-direction: column;
+        }
+        .story-icon {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+        }
+        .story-title {
+            font-family: 'Stack Sans Notch', 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+        }
+        .story-text {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            flex-grow: 1;
+        }
+        .card-accent-blue { border-top: 3px solid var(--blue); }
+        .card-accent-gold { border-top: 3px solid var(--gold); }
+        .card-accent-red { border-top: 3px solid var(--red); }
+
+        /* Data Table */
+        .data-table { width: 100%; border-collapse: collapse; }
+        .data-table tr { border-bottom: 1px solid var(--border); }
+        .data-table tr:last-child { border-bottom: none; }
+        .data-table td { padding: 13px 0; font-size: 0.9rem; }
+        .data-table td:first-child { color: var(--text-secondary); }
+        .data-table td:last-child { text-align: right; font-weight: 500; }
+
+        .hl-gold { color: var(--gold); font-family: 'IBM Plex Mono', monospace; font-weight: 600; }
+        .hl-blue { color: var(--blue); font-family: 'IBM Plex Mono', monospace; font-weight: 600; }
+        .hl-red { color: var(--red); font-family: 'IBM Plex Mono', monospace; font-weight: 600; }
+        .hl-green { color: var(--green); font-family: 'IBM Plex Mono', monospace; font-weight: 600; }
+
+        /* Alert boxes */
+        .alert {
+            padding: 16px 20px;
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+            line-height: 1.75;
+            margin-top: 20px;
+        }
+        .alert-danger {
+            background: var(--red-dim);
+            border-left: 4px solid var(--red);
+        }
+        .alert-warning {
+            background: var(--gold-dim);
+            border-left: 4px solid var(--gold);
+        }
+        .alert-info {
+            background: var(--blue-dim);
+            border-left: 4px solid var(--blue);
+        }
+
+        /* Donut via CSS conic-gradient */
+        .donut-wrap { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 16px 0; }
+        .donut {
+            width: 180px; height: 180px;
+            border-radius: 50%;
+            background: conic-gradient(var(--blue) 0% 41.8%, var(--gold) 41.8% 66.8%, var(--teal) 66.8% 100%);
+            position: relative;
+        }
+        .donut::after {
+            content: '';
+            position: absolute; inset: 30px;
+            background: var(--bg-card);
+            border-radius: 50%;
+        }
+        .legend { margin-top: 20px; font-size: 0.82rem; width: 100%; }
+        .legend-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+        .legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+        /* Ecosystem Diagram */
+        .eco-box {
+            background: var(--bg-card-alt);
+            border-radius: var(--radius);
+            padding: 28px 20px;
+            text-align: center;
+            margin-bottom: 24px;
+            border: 1px solid var(--border);
+        }
+        .eco-node {
+            display: inline-block;
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+        .eco-arrow { color: var(--text-muted); margin: 6px 0; font-size: 1.1rem; }
+        .eco-desc { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 4px; }
+        .list-dot { list-style: none; }
+        .list-dot li { padding-left: 20px; position: relative; margin-bottom: 10px; font-size: 0.9rem; }
+        .list-dot li::before { content: ''; position: absolute; left: 0; top: 10px; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+
+        /* Timeline */
+        .tl { position: relative; padding-left: 28px; }
+        .tl::before {
+            content: ''; position: absolute; left: 6px; top: 4px; bottom: 4px; width: 2px;
+            background: linear-gradient(to bottom, var(--green), var(--blue), var(--red), var(--text-muted));
+        }
+        .tl-item { position: relative; margin-bottom: 28px; }
+        .tl-item:last-child { margin-bottom: 0; }
+        .tl-dot {
+            position: absolute; left: -28px; width: 14px; height: 14px; border-radius: 50%;
+            border: 2px solid var(--text-muted); background: var(--bg); z-index: 2;
+        }
+        .tl-dot.done { border-color: var(--green); background: var(--green); }
+        .tl-dot.active { border-color: var(--blue); animation: pulse 2s infinite; }
+        .tl-dot.critical { border-color: var(--red); box-shadow: 0 0 12px rgba(239,68,68,0.5); animation: pulse-r 2s infinite; }
+        @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(59,130,246,0.4); } 50% { box-shadow: 0 0 0 8px rgba(59,130,246,0); } }
+        @keyframes pulse-r { 0%,100% { box-shadow: 0 0 0 0 rgba(239,68,68,0.5); } 50% { box-shadow: 0 0 0 8px rgba(239,68,68,0); } }
+
+        .tl-date { font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; color: var(--text-muted); font-weight: 500; }
+        .tl-title { font-family: 'Stack Sans Notch', 'Plus Jakarta Sans', sans-serif; font-size: 1.15rem; font-weight: 700; margin: 4px 0 6px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+        .tl-desc { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7; }
+        .badge-sm {
+            display: inline-block;
+            font-size: 0.65rem; padding: 2px 8px; border-radius: 10px;
+            font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: 0.3px;
+        }
+        .b-done { background: var(--green-dim); color: var(--green); }
+        .b-proc { background: var(--blue-dim); color: var(--blue); }
+        .b-crit { background: var(--red-dim); color: var(--red); border: 1px solid rgba(239,68,68,0.3); }
+        .b-soon { background: rgba(255,255,255,0.06); color: var(--text-muted); }
+
+        /* Calculator */
+        .calc-card { background: var(--bg-card-alt); }
+        .calc-group { margin-bottom: 20px; }
+        .calc-group label {
+            display: flex; justify-content: space-between; align-items: center;
+            font-size: 0.88rem; font-weight: 500; margin-bottom: 10px;
+        }
+        .calc-val {
+            font-family: 'IBM Plex Mono', monospace;
+            font-weight: 600;
+            color: var(--gold);
+            font-size: 1rem;
+        }
+
+        input[type="range"] {
+            width: 100%; appearance: none; height: 6px;
+            background: rgba(255,255,255,0.1); border-radius: 3px; outline: none;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            appearance: none; width: 22px; height: 22px; border-radius: 50%;
+            background: var(--gold); cursor: pointer; border: 3px solid var(--bg-card);
+            box-shadow: 0 0 8px rgba(245,158,11,0.4);
+        }
+        input[type="range"]::-moz-range-thumb {
+            width: 22px; height: 22px; border-radius: 50%;
+            background: var(--gold); cursor: pointer; border: 3px solid var(--bg-card);
+        }
+
+        .out-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 24px; }
+        .out-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 16px;
+        }
+        .out-card .o-label { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 6px; line-height: 1.4; }
+        .out-card .o-val { font-family: 'IBM Plex Mono', monospace; font-size: 1.15rem; font-weight: 600; }
+
+        .btn-sim {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: linear-gradient(135deg, var(--blue), #2563eb);
+            color: #fff;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            margin-top: 24px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn-sim:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59,130,246,0.3);
+            text-decoration: none;
+        }
+
+        /* Scenario Cards */
+        .scen-badge {
+            display: inline-block;
+            font-size: 0.7rem; padding: 3px 10px; border-radius: 10px;
+            font-weight: 600; margin-bottom: 14px; letter-spacing: 0.2px;
+        }
+        .scen-title {
+            font-family: 'Stack Sans Notch', 'Plus Jakarta Sans', sans-serif; font-weight: 700;
+            font-size: 1.15rem; margin-bottom: 12px;
+        }
+        .scen-text { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.75; margin-bottom: 12px; }
+        .scen-footer { border-top: 1px solid var(--border); padding-top: 12px; font-size: 0.85rem; font-weight: 600; }
+
+        /* Zone Cards */
+        .zone { text-align: center; display: flex; flex-direction: column; align-items: center; }
+        .zone-badge { font-size: 0.72rem; padding: 4px 12px; border-radius: 20px; font-weight: 600; margin-bottom: 14px; }
+        .zone-range { font-family: 'IBM Plex Mono', monospace; font-size: 1.2rem; font-weight: 600; margin-bottom: 12px; }
+        .zone-text { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; flex-grow: 1; margin-bottom: 14px; }
+        .zone-strat { border-top: 1px solid var(--border); padding-top: 12px; font-size: 0.82rem; font-weight: 600; width: 100%; }
+        .zone-hl { border: 2px solid rgba(59,130,246,0.35); box-shadow: 0 0 20px rgba(59,130,246,0.08); }
+
+        /* Target Bars */
+        .tgt-row { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; flex-wrap: wrap; }
+        .tgt-label { min-width: 120px; font-weight: 600; font-size: 0.85rem; }
+        .tgt-label small { display: block; font-size: 0.72rem; color: var(--text-muted); font-weight: 400; }
+        .tgt-track { flex: 1; min-width: 120px; height: 8px; background: rgba(255,255,255,0.05); border-radius: 4px; position: relative; }
+        .tgt-fill { position: absolute; left: 0; top: 0; height: 100%; border-radius: 4px; }
+        .tgt-val { font-family: 'IBM Plex Mono', monospace; font-size: 0.88rem; font-weight: 600; min-width: 140px; text-align: right; }
+
+        /* Risk/Catalyst */
+        .rc-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 14px; font-size: 0.88rem; line-height: 1.7; }
+        .rc-item i { flex-shrink: 0; margin-top: 3px; }
+
+        /* BUVA Chart */
+        .buva-bars { display: flex; align-items: flex-end; height: 140px; gap: 6px; padding-bottom: 1px; border-bottom: 1px solid var(--border); }
+        .b-bar { flex: 1; border-radius: 4px 4px 0 0; position: relative; min-width: 0; transition: opacity 0.3s; }
+        .b-bar:hover { opacity: 0.8; }
+        .b-bar .b-pct { position: absolute; top: -22px; left: 50%; transform: translateX(-50%); font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; font-weight: 600; white-space: nowrap; }
+        .b-labels { display: flex; gap: 6px; margin-top: 8px; }
+        .b-labels span { flex: 1; text-align: center; font-size: 0.68rem; color: var(--text-muted); }
+
+        /* Fundamental Section */
+        .fund-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .fund-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 16px;
+        }
+        .fund-item .f-label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+        .fund-item .f-val { font-family: 'IBM Plex Mono', monospace; font-size: 1.1rem; font-weight: 600; }
+        .fund-item .f-sub { font-size: 0.75rem; color: var(--text-muted); margin-top: 2px; }
+
+        /* Checklist */
+        .chk-list { list-style: none; }
+        .chk-list li { padding-left: 28px; position: relative; margin-bottom: 12px; font-size: 0.9rem; line-height: 1.7; }
+        .chk-list li i { position: absolute; left: 0; top: 3px; font-size: 1rem; }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 48px 0 32px;
+            text-align: center;
+            background: rgba(5,8,14,0.6);
+        }
+        footer p { color: var(--text-muted); font-size: 0.82rem; max-width: 560px; margin: 0 auto 12px; line-height: 1.7; }
+        .footer-brand { font-family: 'Stack Sans Notch', 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 1.1rem; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+
+        /* Divider */
+        .divider { height: 1px; background: var(--border); margin: 0; }
+
+        /* Responsive — Mobile First */
+        @media (max-width: 768px) {
+            body { font-size: 14px; }
+            section { padding: 40px 0; }
+            .hero { padding: 60px 0 40px; }
+            .hero h1 { font-size: 1.9rem; letter-spacing: -0.5px; }
+            .hero-ticker { font-size: 1rem; }
+            .hero-desc { font-size: 0.92rem; }
+            .stat-row, .grid-3 { grid-template-columns: 1fr; }
+            .grid-2 { grid-template-columns: 1fr; }
+            .out-grid { grid-template-columns: 1fr 1fr; }
+            .section-title { font-size: 1.45rem; }
+            .fund-grid { grid-template-columns: 1fr 1fr; }
+            .tgt-row { flex-direction: column; align-items: stretch; }
+            .tgt-val { text-align: left; min-width: auto; }
+            .eco-node { font-size: 0.75rem; padding: 8px 14px; }
+            .data-table td { font-size: 0.82rem; padding: 11px 0; }
+            .card { padding: 20px; }
+        }
+        @media (max-width: 420px) {
+            .out-grid { grid-template-columns: 1fr; }
+            .fund-grid { grid-template-columns: 1fr; }
+            .container { padding: 0 16px; }
+        }
+
+        /* Separator */
+        .sep { margin: 0 0 0 0; padding: 0; border: 0; height: 1px; background: var(--border); }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="data:image/png;base64,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" alt="Logo" style="height: 32px; width: auto; object-fit: contain;"> Anthropic Stock
+            </div>
+            <div style="display: flex; gap: 12px; align-items: center;">
+                <a href="https://anthropicstock.up.railway.app/" target="_blank" class="badge-exclusive" style="color: var(--blue); border-color: var(--blue); background: var(--blue-dim); text-decoration: none;"><i class="ti ti-brand-appstore"></i> Buka Aplikasi</a>
+                <div class="badge-exclusive">🔒 VIP MEMBER</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-bg" id="heroBg"></div>
+        <div class="hero-grid" id="heroGrid"></div>
+        <div class="container">
+            <div class="reveal">
+                <div class="section-label"><i class="ti ti-chart-bar"></i> RISET EKSKLUSIF · 7 JUNI 2026</div>
+                <h1>Right Issue Jumbo</h1>
+                <div class="hero-ticker">$SINI · PT Singaraja Putra Tbk</div>
+                <p class="hero-desc">Analisis mendalam aksi korporasi terbesar SINI — dari data teknis prospektus, skenario profit, hingga strategi entry yang perlu kamu ketahui sebelum Cum Date 8 Juli 2026.</p>
+                <div style="margin-bottom: 40px; transform: translateY(10px);">
+                    <a href="https://anthropicstock.up.railway.app/" target="_blank" class="btn-sim" style="padding: 14px 28px; box-shadow: var(--glow-blue);">
+                        <i class="ti ti-rocket"></i> Akses Anthropic Stock App
+                    </a>
+                </div>
+            </div>
+
+            <div class="stat-row reveal">
+                <div class="stat-box">
+                    <div class="s-label">CUM HMETD</div>
+                    <div class="s-val c-blue mono">8 Juli 2026</div>
+                    <div class="s-sub">~31 hari lagi</div>
+                </div>
+                <div class="stat-box">
+                    <div class="s-label">HARGA PELAKSANAAN</div>
+                    <div class="s-val c-gold mono">Rp 5.000</div>
+                    <div class="s-sub">per saham baru</div>
+                </div>
+                <div class="stat-box">
+                    <div class="s-label">TARGET DANA</div>
+                    <div class="s-val c-red mono">Rp 3,61 T</div>
+                    <div class="s-sub">dilusi maks 60%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="sep">
+
+    <!-- RINGKASAN EKSEKUTIF -->
+    <section id="ringkasan">
+        <div class="container">
+            <div class="reveal">
+                <div class="section-title">Apa yang Perlu Kamu Tahu?</div>
+                <div class="section-subtitle">Tiga hal utama yang wajib dipahami sebelum mengambil keputusan terkait right issue SINI.</div>
+            </div>
+
+            <div class="grid-3 reveal">
+                <div class="card card-accent-blue story-card">
+                    <div class="story-icon">🏭</div>
+                    <div class="story-title c-blue">The Story</div>
+                    <div class="story-text">SINI bukan lagi perusahaan kayu dan hotel biasa. Ini adalah kendaraan Prajogo Pangestu (via CUAN) untuk memiliki aset tambang batu bara Kalimantan Timur secara langsung. Right issue ini adalah <strong>backdoor listing</strong> — aset tambang PTRO dipindahkan ke SINI. Setelah selesai, SINI akan jadi <strong>pure-play thermal coal company</strong> di bawah ekosistem Prajogo.</div>
+                </div>
+                <div class="card card-accent-gold story-card">
+                    <div class="story-icon">📈</div>
+                    <div class="story-title c-gold">The Opportunity</div>
+                    <div class="story-text">Harga tebus hanya <strong>Rp 5.000</strong> sementara harga pasar ~Rp 9.400. PTRO sudah dikonfirmasi sebagai <strong>standby buyer</strong> — artinya RI ini dijamin terserap. SINI berpotensi keluar dari Papan Pemantauan Khusus setelah RI, yang berarti lebih likuid dan bisa dimasuki investor institusi.</div>
+                </div>
+                <div class="card card-accent-red story-card">
+                    <div class="story-icon">⚠️</div>
+                    <div class="story-title c-red">The Risk</div>
+                    <div class="story-text">IHSG -35,3% YTD 2026 — sentimen pasar sangat bearish. Aset yang diakuisisi (KMS) masih merugi (akumulasi rugi Rp 156M). Kualitas batu bara rendah (3.900 kcal). Dilusi 60% bagi yang tidak tebus. Valuasi KMS premium 4,9x P/BV padahal masih rugi.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="sep">
+
+    <!-- FUNDAMENTAL SINI -->
+    <section id="fundamental">
+        <div class="container">
+            <div class="reveal">
+                <div class="section-label">📊 LAPORAN KEUANGAN FY2025</div>
+                <div class="section-title">Fundamental SINI</div>
+                <div class="section-subtitle">Kinerja keuangan PT Singaraja Putra Tbk tahun penuh 2025 (audited, dirilis 14 April 2026).</div>
+            </div>
+
+            <div class="fund-grid reveal">
+                <div class="fund-item">
+                    <div class="f-label">Pendapatan (Revenue)</div>
+                    <div class="f-val c-blue">Rp 534 Miliar</div>
+                    <div class="f-sub">+22,7% YoY (dari Rp 435 M di 2024)</div>
+                </div>
+                <div class="fund-item">
+                    <div class="f-label">Laba Kotor</div>
+                    <div class="f-val c-green">Rp 98,1 Miliar</div>
+                    <div class="f-sub">+8,8% YoY (dari Rp 90,2 M di 2024)</div>
+                </div>
+                <div class="fund-item">
+                    <div class="f-label">Rugi Bersih</div>
+                    <div class="f-val c-red">-Rp 43,1 Miliar</div>
+                    <div class="f-sub">Memburuk dari -Rp 23,6 M di 2024</div>
+                </div>
+                <div class="fund-item">
+                    <div class="f-label">Rugi Per Saham</div>
+                    <div class="f-val c-red">-Rp 89,58</div>
+                    <div class="f-sub">Kendala infrastruktur tambang batu bara</div>
+                </div>
+                <div class="fund-item">
+                    <div class="f-label">Harga Pasar Saat Ini</div>
+                    <div class="f-val c-gold">~Rp 9.400</div>
+                    <div class="f-sub">Per 5 Juni 2026, sempat menyentuh Rp 10.800</div>
+                </div>
+                <div class="fund-item">
+                    <div class="f-label">Saham Beredar</div>
+                    <div class="f-val">481.000.000</div>
+                    <div class="f-sub">Market cap ~Rp 4,5 Triliun</div>
+                </div>
+            </div>
+
+            <div class="alert alert-info reveal" style="margin-top: 24px;">
+                <strong>📝 Catatan:</strong> SINI masih membukukan rugi bersih di FY2025, terutama karena kendala infrastruktur pada segmen batu bara. Namun, revenue tumbuh +22,7% YoY — menunjukkan bisnis operasional yang berkembang. Setelah RI selesai dan KMS terintegrasi, profil finansial SINI akan berubah drastis menjadi perusahaan tambang batu bara.
+            </div>
+        </div>
+    </section>
+
+    <hr class="sep">
+
+    <!-- DATA TEKNIS -->
+    <section id="data-teknis">
+        <div class="container">
+            <div class="reveal">
+                <div class="section-label">📋 RESMI · PROSPEKTUS 2 JUNI 2026</div>
+                <div class="section-title">Data Teknis Right Issue</div>
+            </div>
+
+            <div class="grid-2 reveal">
+                <div class="card">
+                    <table class="data-table">
+                        <tr><td>Emiten</td><td>PT Singaraja Putra Tbk (SINI)</td></tr>
+                        <tr><td>Harga Pelaksanaan</td><td class="hl-gold">Rp 5.000 / saham</td></tr>
+                        <tr><td>Rasio HMETD</td><td class="hl-blue">2 saham lama → 3 HMETD</td></tr>
+                        <tr><td>Saham Baru Maks</td><td class="mono">721.500.000 lembar</td></tr>
+                        <tr><td>Saham Beredar Saat Ini</td><td class="mono">481.000.000 lembar</td></tr>
+                        <tr><td>Total Pasca RI</td><td class="mono">1.202.500.000 lembar</td></tr>
+                        <tr><td>Dilusi Maksimum</td><td class="hl-red">60%</td></tr>
+                        <tr><td>Pembeli Siaga</td><td class="hl-green">PT Petrosea Tbk (PTRO) ✓</td></tr>
+                        <tr><td>Target Dana</td><td class="mono">~Rp 3,607 Triliun</td></tr>
+                        <tr><td>Nominal Saham</td><td class="mono">Rp 100 / lembar</td></tr>
+                    </table>
+                </div>
+                <div class="card">
+                    <h4 style="font-size: 0.95rem; margin-bottom: 20px; color: var(--text-secondary); font-weight: 500; text-align: center;">Penggunaan Dana</h4>
+                    <div class="donut-wrap">
+                        <div class="donut"></div>
+                        <div class="legend">
+                            <div class="legend-row"><div class="legend-dot" style="background: var(--blue)"></div> Akuisisi 99,995% PT KMS dari PTRO — <strong>Rp 1,51 T</strong></div>
+                            <div class="legend-row"><div class="legend-dot" style="background: var(--gold)"></div> Pembayaran Awal Utang — <strong>Rp 900 M</strong></div>
+                            <div class="legend-row"><div class="legend-dot" style="background: var(--teal)"></div> Modal Kerja — <strong>~Rp 1,2 T</strong></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert alert-danger reveal">
+                <strong>⚠ KOREKSI PENTING:</strong> Rasio 2:3 BUKAN berarti dapat 4 saham baru. Artinya: setiap <strong>2 saham lama</strong> → dapat <strong>3 HMETD</strong> → boleh tebus <strong>3 saham baru</strong> @ Rp 5.000. Hasil akhir: 2 lama + 3 baru = <strong>5 saham total</strong>.
+            </div>
+        </div>
+    </section>
+
+    <hr class="sep">
+
+    <!-- ASET KMS & PROSPEK BATU BARA -->
+    <section id="aset-kms">
+        <div class="container">
+            <div class="reveal">
+                <div class="section-label">⛏️ DEEP DIVE</div>
+                <div class="section-title">Aset KMS & Prospek Batu Bara</div>
+                <div class="section-subtitle">Apa sebenarnya aset yang akan dibeli SINI seharga Rp 1,51 Triliun? Dan bagaimana prospek batu bara ke depan?</div>
+            </div>
+
+            <div class="card reveal" style="margin-bottom: 16px;">
+                <h3 style="font-size: 1.1rem; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;"><i class="ti ti-pickaxe c-gold"></i> Profil PT Kemilau Mulia Sakti (KMS)</h3>
+                <div class="fund-grid" style="margin-bottom: 16px;">
+                    <div class="fund-item">
+                        <div class="f-label">Lokasi Tambang</div>
+                        <div class="f-val" style="font-size: 0.95rem;">Kec. Tering, Kutai Barat</div>
+                        <div class="f-sub">Kalimantan Timur</div>
+                    </div>
+                    <div class="fund-item">
+                        <div class="f-label">Luas Area</div>
+                        <div class="f-val">4.776 Ha</div>
+                    </div>
+                    <div class="fund-item">
+                        <div class="f-label">Sumber Daya (Resources)</div>
+                        <div class="f-val c-blue">164,1 Juta Ton</div>
+                    </div>
+                    <div class="fund-item">
+                        <div class="f-label">Cadangan Siap Tambang</div>
+                        <div class="f-val c-gold">82 Juta Ton</div>
+                        <div class="f-sub">Mineable reserves</div>
+                    </div>
+                    <div class="fund-item">
+                        <div class="f-label">Stripping Ratio</div>
+                        <div class="f-val">6,7x</div>
+                        <div class="f-sub">Overburden 549 jt BCM</div>
+                    </div>
+                    <div class="fund-item">
+                        <div class="f-label">Kualitas Batu Bara</div>
+                        <div class="f-val" style="font-size: 0.95rem;">~3.900 kcal/kg (GAR)</div>
+                        <div class="f-sub">Low-rank thermal coal</div>
+                    </div>
+                </div>
+                <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.8;">KMS memiliki 99% saham PT Cristian Eka Pratama (CEP), yang merupakan pemegang IUP tambang batu bara di Kutai Barat. Dengan cadangan 82 juta ton dan estimasi umur tambang <strong>~15 tahun</strong>, ini adalah aset riil yang memberikan SINI landasan bisnis konkret — bukan sekadar "cangkang kosong".</p>
+            </div>
+
+            <div class="card reveal">
+                <h3 style="font-size: 1.1rem; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;"><i class="ti ti-flame c-gold"></i> Prospek Batu Bara 2026–2027</h3>
+                <div style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.85;">
+                    <ul class="list-dot">
+                        <li><strong>Stabilisasi Harga:</strong> Setelah puncak pasca-konflik Rusia-Ukraina, harga batu bara thermal diproyeksikan stabil di atas level pra-krisis hingga 2030. Newcastle benchmark tetap resilient.</li>
+                        <li><strong>Demand Asia Kuat:</strong> China dan India tetap menjadi anchor utama permintaan global. Kebutuhan energi baseload membuat demand batu bara tetap resilient dalam jangka pendek-menengah.</li>
+                        <li><strong>Kebijakan Indonesia:</strong> Pemerintah RI aktif mengelola kuota produksi (RKAB) untuk mencegah oversupply dan menjaga harga kompetitif — ini mendukung stabilitas margin produsen domestik.</li>
+                        <li><strong>Risiko Jangka Panjang:</strong> Transisi energi global tetap menjadi tekanan jangka panjang. Namun, untuk horizon 5–10 tahun ke depan, batu bara masih menjadi tulang punggung energi di Asia Tenggara.</li>
+                        <li><strong>Konteks KMS:</strong> Dengan kualitas 3.900 kcal (low-rank), KMS bermain di segmen harga lebih rendah namun volume besar. Margin tipis tapi stabil jika operasional efisien. Target grup Prajogo: <strong>30 juta ton/tahun pada 2031</strong>.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="sep">
+
+    <!-- EKOSISTEM -->
+    <section id="ekosistem">
+        <div class="container">
+            <div class="reveal">
+                <div class="section-title">Peta Ekosistem Prajogo</div>
+                <div class="section-subtitle">Kenapa nama Prajogo Pangestu membuat SINI berbeda dari right issue biasa.</div>
+            </div>
+
+            <div class="eco-box reveal" style="font-family: 'IBM Plex Mono', monospace;">
+                <div class="eco-node" style="border-color: var(--blue);">CUAN — Petrindo Jaya Kreasi</div>
+                <div class="eco-arrow">↓</div>
+                <div class="eco-desc">via KJP, memiliki 19,99% SINI (Des 2025)</div>
+                <div class="eco-desc">Target: minimal 29% pasca-RI</div>
+                <div class="eco-arrow">↓</div>
+                <div class="eco-node" style="border-color: var(--gold);">SINI — Singaraja Putra</div>
+                <div class="eco-desc" style="margin-top: 4px;">← Happy Hapsoro (pemegang saham existing)</div>
+                <div class="eco-arrow">↓ <span style="font-size: 0.72rem;">akuisisi 99,995% dari PTRO</span></div>
+                <div class="eco-node" style="border-color: var(--red);">KMS — Kemilau Mulia Sakti</div>
+                <div class="eco-arrow">↓ <span style="font-size: 0.72rem;">memiliki 99%</span></div>
+                <div class="eco-node" style="border-color: var(--text-muted);">CEP — Cristian Eka Pratama</div>
+                <div style="margin-top: 8px;">
+                    <div style="font-weight: 700; color: var(--gold); font-size: 0.85rem;">⛏ Tambang Batu Bara Kutai Barat, Kaltim</div>
+                    <div class="eco-desc">82 jt ton cadangan · 4.776 Ha · ~15 tahun umur</div>
+                </div>
+                <div style="margin-top: 20px; padding-top: 16px; border-top: 1px dashed var(--border);">
+                    <div class="eco-desc"><strong>CUAN</strong> → owns ~45% → <strong>PTRO</strong> (Standby Buyer RI SINI)</div>
+                </div>
+            </div>
+
+            <ul class="list-dot reveal">
+                <li><strong>CUAN:</strong> Holding strategis, pengatur dana dan strategi. Dikendalikan oleh Prajogo Pangestu.</li>
+                <li><strong>PTRO:</strong> Fokus ke jasa pertambangan, EPC, dan logistik (setelah lepas KMS ke SINI).</li>
+                <li><strong>SINI:</strong> Pure-play thermal coal asset owner (setelah RI selesai). Memegang langsung aset tambang.</li>
+            </ul>
+
+            <div class="card reveal" style="margin-top: 16px;">
+                <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.85;">Dana dari RI SINI → beli KMS dari PTRO → uang masuk ke PTRO → PTRO mayoritas dimiliki CUAN. Secara grup, uang "berputar" di dalam ekosistem, namun hasilnya adalah <strong>struktur yang jauh lebih bersih dan terfokus</strong>. Ini bukan sekadar aksi korporasi biasa — ini adalah <strong>restrukturisasi strategis</strong> untuk memisahkan kepemilikan aset dari operasional jasa tambang.</p>
+            </div>
+        </div>
+    </section>
+
+    <hr class="sep">
+
+    <!-- TIMELINE -->
+    <section id="timeline">
+        <div class="container">
+            <div class="reveal">
+                <div class="section-title">Timeline Aksi Korporasi</div>
+                <div class="section-subtitle">Jadwal resmi berdasarkan prospektus ringkas yang diumumkan ke OJK & BEI.</div>
+            </div>
+
+            <div class="tl reveal">
+                <div class="tl-item">
+                    <div class="tl-dot done"></div>
+                    <div class="tl-date">26 Mei 2026</div>
+                    <div class="tl-title">RUPSLB Dilaksanakan <span class="badge-sm b-done">SELESAI ✓</span></div>
+                    <div class="tl-desc">Persetujuan pemegang saham berhasil. RI resmi disetujui untuk dilanjutkan.</div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-dot done"></div>
+                    <div class="tl-date">2 Juni 2026</div>
+                    <div class="tl-title">Prospektus Ringkas Diumumkan <span class="badge-sm b-done">SELESAI ✓</span></div>
+                    <div class="tl-desc">Rasio 2:3, harga pelaksanaan Rp 5.000, dan penggunaan dana resmi dikonfirmasi via BEI & OJK.</div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-dot active"></div>
+                    <div class="tl-date">30 Juni 2026 (Target)</div>
+                    <div class="tl-title">Efektif OJK <span class="badge-sm b-proc">PROSES ⏳</span></div>
+                    <div class="tl-desc">Review dokumen pendaftaran oleh OJK. Timeline ketat — LK 2025 audited hanya valid sampai 30 Juni 2026.</div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-dot critical"></div>
+                    <div class="tl-date" style="color: var(--red);">8 Juli 2026</div>
+                    <div class="tl-title" style="color: var(--red);">⏰ CUM HMETD — DEADLINE UTAMA <span class="badge-sm b-crit">CRITICAL</span></div>
+                    <div class="tl-desc">Batas akhir beli saham SINI untuk mendapatkan HMETD. Wajib beli sebelum penutupan <strong>pasar reguler & negosiasi (15:59 WIB)</strong>. Setelah tanggal ini, saham yang dibeli TIDAK mendapat hak.</div>
+                    <div class="alert alert-warning" style="margin-top: 10px; font-size: 0.82rem;">
+                        Pemegang saham yang <strong>sudah punya SINI sebelum 8 Juli</strong> otomatis dapat HMETD. Tidak perlu aksi apapun sampai periode perdagangan HMETD dibuka pada 14 Juli.
+                    </div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-date">10 Juli 2026</div>
+                    <div class="tl-title">Recording Date / DPS <span class="badge-sm b-soon">UPCOMING</span></div>
+                    <div class="tl-desc">Pemegang saham tercatat di DPS pukul 16:00 WIB berhak memperoleh HMETD.</div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-date">14 – 20 Juli 2026</div>
+                    <div class="tl-title">Perdagangan & Pelaksanaan HMETD <span class="badge-sm b-soon">UPCOMING</span></div>
+                    <div class="tl-desc">HMETD dapat diperjualbelikan di pasar (kode: SINI-R) atau ditebus untuk mendapat saham baru. Durasi <strong>5 hari bursa</strong>.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="sep">
+
+    <!-- KALKULATOR TERP -->
+    <section id="kalkulator">
+        <div class="container">
+            <div class="reveal">
+                <div class="section-label"><i class="ti ti-calculator"></i> INTERAKTIF</div>
+                <div class="section-title">Kalkulator TERP & HMETD</div>
+                <div class="section-subtitle">Simulasi matematis berdasarkan harga entry-mu. Geser slider untuk lihat hasilnya secara real-time.</div>
+            </div>
+
+            <div class="card calc-card reveal">
+                <div class="grid-2">
+                    <div class="calc-group">
+                        <label>Harga beli SINI kamu (Rp) <span class="calc-val" id="vPrice">Rp 9.400</span></label>
+                        <input type="range" id="iPrice" min="5000" max="20000" step="100" value="9400" oninput="calc()">
+                    </div>
+                    <div class="calc-group">
+                        <label>Jumlah saham (lembar) <span class="calc-val" id="vShares" style="color: var(--blue);">2.000</span></label>
+                        <input type="range" id="iShares" min="100" max="50000" step="100" value="2000" oninput="calc()">
+                    </div>
+                </div>
+
+                <div class="out-grid">
+                    <div class="out-card" style="border-color: rgba(59,130,246,0.25);">
+                        <div class="o-label">TERP (Harga Teoritis Ex-Rights)</div>
+                        <div class="o-val c-blue" id="oTerp">Rp 6.760</div>
+                    </div>
+                    <div class="out-card" style="border-color: rgba(34,197,94,0.25);">
+                        <div class="o-label">Nilai 1 HMETD</div>
+                        <div class="o-val c-green" id="oHval">Rp 1.760</div>
+                    </div>
+                    <div class="out-card">
+                        <div class="o-label">HMETD yang Kamu Dapat</div>
+                        <div class="o-val c-gold" id="oHget">3.000</div>
+                    </div>
+                    <div class="out-card">
+                        <div class="o-label">Biaya Tebus Semua HMETD</div>
+                        <div class="o-val c-gold" id="oCost">Rp 15.000.000</div>
+                    </div>
+                    <div class="out-card">
+                        <div class="o-label">Total Investasi (jika tebus semua)</div>
+                        <div class="o-val" id="oInv">Rp 33.800.000</div>
+                    </div>
+                    <div class="out-card">
+                        <div class="o-label">Nilai Portofolio di TERP</div>
+                        <div class="o-val" id="oPort">Rp 33.800.000</div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 28px;">
+                    <a href="https://anthropicstock.up.railway.app/simulator" target="_blank" class="btn-sim">
+                        <i class="ti ti-external-link"></i> Buka Simulator Lengkap Anthropic Stock
+                    </a>
+                </div>
+            </div>
+
+            <div class="card reveal" style="margin-top: 16px;">
+                <ul class="list-dot">
+                    <li><strong>TERP bukan "harga crash"</strong> — ini penyesuaian matematis yang WAJAR setelah rights issue. Rumus: (2×Harga + 3×5.000) ÷ 5.</li>
+                    <li><strong>Jika kamu tebus semua HMETD</strong>, nilai total investasimu tidak berubah (breakeven di TERP). Tidak ada yang hilang.</li>
+                    <li><strong>Cuan terjadi</strong> jika harga pasca-RI naik DI ATAS TERP. Rugi terjadi jika harga turun di bawah TERP.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <hr class="sep">
+
+    <!-- 3 SKENARIO -->
+    <section id="skenario">
+        <div class="container">
+            <div class="reveal">
+                <div class="section-title">3 Skenario — Pilih yang Tepat</div>
+                <div class="section-subtitle">Setiap pemegang saham SINI punya 3 pilihan saat HMETD aktif (14–20 Juli 2026).</div>
+            </div>
+
+            <div class="grid-3 reveal">
+                <div class="card story-card">
+                    <div class="scen-badge" style="background: var(--blue-dim); color: var(--blue);">✅ DIREKOMENDASIKAN</div>
+                    <div class="scen-title">A. Tebus Semua HMETD</div>
+                    <div class="scen-text">Saat HMETD aktif (14–20 Juli), tebus di harga Rp 5.000/saham via aplikasi broker. Saham kamu bertambah 150%.</div>
+                    <div class="scen-text"><strong>Syarat:</strong> Punya dana cash = HMETD × Rp 5.000.</div>
+                    <div class="scen-text"><strong>Cocok untuk:</strong> Kamu percaya dengan story Prajogo dan punya dana tambahan.</div>
+                    <div class="scen-footer c-green"><i class="ti ti-trending-up"></i> Berpotensi Maksimal</div>
+                </div>
+
+                <div class="card story-card">
+                    <div class="scen-badge" style="background: var(--gold-dim); color: var(--gold);">💰 ALTERNATIF</div>
+                    <div class="scen-title">B. Jual HMETD di Pasar</div>
+                    <div class="scen-text">Jual HMETD di pasar seperti jual saham biasa (kode: SINI-R). Saham turun ke TERP, uang HMETD mengkompensasi.</div>
+                    <div class="scen-text"><strong>Syarat:</strong> Tidak perlu tambahan dana cash apapun.</div>
+                    <div class="scen-text"><strong>Cocok untuk:</strong> Tidak mau keluarkan dana tambahan tapi mau jaga nilai investasi.</div>
+                    <div class="scen-footer c-muted"><i class="ti ti-arrows-left-right"></i> Netral / Breakeven</div>
+                </div>
+
+                <div class="card story-card" style="border-color: rgba(239,68,68,0.25);">
+                    <div class="scen-badge" style="background: var(--red-dim); color: var(--red);">❌ HINDARI!</div>
+                    <div class="scen-title">C. Abaikan / Diam Saja</div>
+                    <div class="scen-text">HMETD hangus otomatis. Saham turun ke TERP. Nilai HMETD = kerugian permanen. Tidak ada alasan untuk memilih ini.</div>
+                    <div class="scen-text"><strong>Contoh:</strong> Jika harga Rp 9.400 → TERP Rp 6.760 → per 2 saham rugi Rp 5.280 dari HMETD hangus.</div>
+                    <div class="scen-text"><strong>Cocok untuk:</strong> Tidak ada alasan yang membenarkan ini.</div>
+                    <div class="scen-footer c-red"><i class="ti ti-trending-down"></i> Rugi Pasti</div>
+                </div>
+            </div>
+
+            <div class="alert alert-danger reveal">
+                <strong>⛔ PENTING:</strong> Jangan pernah membiarkan HMETD hangus. Jika tidak mau tebus, <strong>JUAL HMETD</strong> di pasar (SINI-R). Apapun lebih baik daripada membiarkannya hangus — itu uang kamu yang terbuang.
+            </div>
+        </div>
+    </section>
+
+    <hr class="sep">
+
+    <!-- STRATEGI ENTRY -->
+    <section id="strategi">
+        <div class="container">
+            <div class="reveal">
+                <div class="section-title">Strategi Entry & Target Pasca RI</div>
+                <div class="section-subtitle">Panduan entry sebelum cum date 8 Juli 2026, berdasarkan level harga saat ini ~Rp 9.400.</div>
+            </div>
+
+            <h3 class="reveal" style="font-size: 1.1rem; margin-bottom: 16px;">Entry Sebelum Cum Date (8 Juli)</h3>
+            <div class="grid-3 reveal">
+                <div class="card zone">
+                    <div class="zone-badge" style="background: var(--green-dim); color: var(--green);">TERP ZONE</div>
+                    <div class="zone-range c-green">Rp 5.500 – 7.000</div>
+                    <div class="zone-text">Mendekati TERP — risiko mekanis terkecil. Ideal jika IHSG masih turun menjelang cum date. Hampir tidak ada downside dari mekanisme rights issue.</div>
+                    <div class="zone-strat c-green">DCA agresif jika koreksi ke sini</div>
+                </div>
+                <div class="card zone zone-hl">
+                    <div class="zone-badge" style="background: var(--blue-dim); color: var(--blue);">LEVEL SAAT INI ⭐</div>
+                    <div class="zone-range c-blue">Rp 8.000 – 10.000</div>
+                    <div class="zone-text">Range harga saat ini (~Rp 9.400). Masih ada margin safety cukup. Akumulasi bertahap (20–30% per minggu) lebih aman di tengah IHSG volatil.</div>
+                    <div class="zone-strat c-blue">Accumulate bertahap Juni–awal Juli</div>
+                </div>
+                <div class="card zone">
+                    <div class="zone-badge" style="background: var(--gold-dim); color: var(--gold);">PREMIUM ZONE</div>
+                    <div class="zone-range c-gold">Rp 10.000 – 13.000</div>
+                    <div class="zone-text">Sudah premium untuk entry besar. Hanya jika sangat yakin momentum SINI dan narrative Prajogo. Risiko tinggi — upside terbatas vs downside.</div>
+                    <div class="zone-strat c-gold">Maks 10–20% alokasi modal</div>
+                </div>
+            </div>
+
+            <h3 class="reveal" style="font-size: 1.1rem; margin: 28px 0 16px;">Target Harga Pasca Right Issue</h3>
+            <div class="card reveal">
+                <div class="tgt-row">
+                    <div class="tgt-label">Bear <small>P/BV 2–3x</small></div>
+                    <div class="tgt-track"><div class="tgt-fill" style="width: 20%; background: var(--red);"></div></div>
+                    <div class="tgt-val c-red">Rp 2.500 – 3.750</div>
+                </div>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin: -6px 0 14px;">Market bearish, KMS underperform, batu bara global turun</p>
+
+                <div class="tgt-row">
+                    <div class="tgt-label">Base <small>P/BV ~5x</small></div>
+                    <div class="tgt-track"><div class="tgt-fill" style="width: 45%; background: var(--blue);"></div></div>
+                    <div class="tgt-val c-blue">Rp 6.200 – 7.800</div>
+                </div>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin: -6px 0 14px;">Konsolidasi pasca-RI, kinerja normal, IHSG sideways</p>
+
+                <div class="tgt-row">
+                    <div class="tgt-label">Bull <small>P/BV 7–10x</small></div>
+                    <div class="tgt-track"><div class="tgt-fill" style="width: 72%; background: var(--green);"></div></div>
+                    <div class="tgt-val c-green">Rp 8.700 – 12.450</div>
+                </div>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin: -6px 0 14px;">Keluar papan khusus + komoditas naik + rerating Prajogo</p>
+
+                <div class="tgt-row">
+                    <div class="tgt-label">Super Bull <small>P/BV 12x+</small></div>
+                    <div class="tgt-track"><div class="tgt-fill" style="width: 100%; background: var(--gold);"></div></div>
+                    <div class="tgt-val c-gold">Rp 15.000+</div>
+                </div>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin: -6px 0 4px;">Full rerating ala Prajogo premium, sentimen IHSG pulih</p>
+
+                <p style="font-size: 0.78rem; color: var(--text-muted); font-style: italic; margin-top: 16px;">*Asumsi ekuitas post-RI ~Rp 1,5T. Total saham post-RI = 1.202,5 juta lembar. BV/share = ~Rp 1.247.</p>
+            </div>
+
+            <div class="alert alert-warning reveal">
+                <strong>⚠ Konteks IHSG:</strong> IHSG turun <strong>-35,3% YTD 2026</strong>, sempat menyentuh 5.594 (terendah 5 tahun). Net foreign sell Rp 67 triliun. MSCI akan review aksesibilitas pasar pada <strong>19 Juni 2026</strong> dan klasifikasi tahunan pada <strong>24 Juni 2026</strong>. BEI telah mengonfirmasi bahwa isu downgrade ke Frontier Market adalah <strong>tidak benar (hoaks)</strong>, namun 6 saham Indonesia (termasuk CUAN) telah dikeluarkan dari MSCI Global Standard Index pada review Mei 2026. Gunakan posisi sizing yang sangat disiplin.
+            </div>
+        </div>
+    </section>
+
+    <hr class="sep">
+
+    <!-- RISIKO VS KATALIS -->
+    <section id="risiko">
+        <div class="container">
+            <div class="reveal">
+                <div class="section-title">Risk & Catalyst Assessment</div>
+            </div>
+
+            <div class="grid-2 reveal">
+                <div class="card" style="border-top: 3px solid var(--green);">
+                    <h3 style="font-size: 1.05rem; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; color: var(--green);"><i class="ti ti-circle-check"></i> Katalis Positif</h3>
+                    <div class="rc-item"><i class="ti ti-check c-green"></i> PTRO resmi sebagai standby buyer — RI dijamin terserap, tidak akan gagal</div>
+                    <div class="rc-item"><i class="ti ti-check c-green"></i> Ekosistem Prajogo Pangestu = brand premium yang biasanya memicu re-rating saham</div>
+                    <div class="rc-item"><i class="ti ti-check c-green"></i> Potensi keluar Papan Pemantauan Khusus → investor institusi bisa masuk</div>
+                    <div class="rc-item"><i class="ti ti-check c-green"></i> Revenue SINI tumbuh +22,7% YoY di FY2025, menunjukkan tren positif</div>
+                    <div class="rc-item"><i class="ti ti-check c-green"></i> Cadangan KMS 82 jt ton (mineable), 164 jt ton (resources) — aset riil bernilai</div>
+                    <div class="rc-item"><i class="ti ti-check c-green"></i> Transformasi dari cangkang → coal company = cerita rerating paling menarik</div>
+                    <div class="rc-item"><i class="ti ti-check c-green"></i> Target ambisius grup: produksi 30 jt ton/tahun pada 2031</div>
+                </div>
+
+                <div class="card" style="border-top: 3px solid var(--red);">
+                    <h3 style="font-size: 1.05rem; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; color: var(--red);"><i class="ti ti-alert-triangle"></i> Risiko Utama</h3>
+                    <div class="rc-item"><i class="ti ti-x c-red"></i> IHSG -35,3% YTD 2026, terendah 5 tahun. Net sell asing Rp 67T</div>
+                    <div class="rc-item"><i class="ti ti-x c-red"></i> KMS masih merugi (akumulasi rugi Rp 156M per 2025), belum tentu langsung profitabel</div>
+                    <div class="rc-item"><i class="ti ti-x c-red"></i> Batu bara low-rank 3.900 kcal → margin tipis, sensitif terhadap harga global & biaya operasional</div>
+                    <div class="rc-item"><i class="ti ti-x c-red"></i> Dilusi 60% bagi pemegang saham yang tidak tebus HMETD — sangat besar</div>
+                    <div class="rc-item"><i class="ti ti-x c-red"></i> Valuasi akuisisi KMS premium ~4,9x P/BV padahal masih rugi — mahal secara objektif</div>
+                    <div class="rc-item"><i class="ti ti-x c-red"></i> Timeline OJK ketat — LK audited hanya valid sampai 30 Juni, potensi mundur</div>
+                    <div class="rc-item"><i class="ti ti-x c-red"></i> Precedent BUVA: setelah puncak hype RI, koreksi ~42% bisa terjadi</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="sep">
+
+    <!-- BELAJAR DARI BUVA -->
+    <section id="buva">
+        <div class="container">
+            <div class="reveal">
+                <div class="section-label">📚 STUDI KASUS</div>
+                <div class="section-title">Pelajaran dari BUVA</div>
+                <div class="section-subtitle">Right issue jumbo serupa yang sudah selesai lebih dulu — PT Bukit Uluwatu Villa Tbk.</div>
+            </div>
+
+            <div class="card reveal">
+                <h4 style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">Pergerakan Harga Saham BUVA (Ilustrasi)</h4>
+                <div class="buva-bars">
+                    <div class="b-bar" style="height: 25%; background: rgba(59,130,246,0.25);"><div class="b-pct" style="color: var(--text-secondary);">Base</div></div>
+                    <div class="b-bar" style="height: 62%; background: rgba(59,130,246,0.35);"><div class="b-pct c-blue">+150%</div></div>
+                    <div class="b-bar" style="height: 100%; background: rgba(34,197,94,0.3);"><div class="b-pct c-green">+208%</div></div>
+                    <div class="b-bar" style="height: 58%; background: rgba(239,68,68,0.3);"><div class="b-pct c-red">-42%</div></div>
+                </div>
+                <div class="b-labels">
+                    <span>Sept '25<br>Isu Muncul</span>
+                    <span>Okt '25<br>Hype RI</span>
+                    <span>Jan '26<br>Puncak ATH</span>
+                    <span>Mei '26<br>Koreksi</span>
+                </div>
+            </div>
+
+            <div class="card reveal" style="margin-top: 16px;">
+                <h4 style="font-size: 0.95rem; margin-bottom: 8px;">Detail BUVA Right Issue</h4>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.75; margin-bottom: 16px;">
+                    BUVA melakukan RI I (akhir 2025): 4,02 miliar saham baru @ Rp 150, menghimpun Rp 604 miliar untuk akuisisi aset properti di Bali. Kini BUVA merencanakan RI II (2026) sebanyak 50 miliar saham — dilusi 203%! Harga saham melonjak +17% dalam satu sesi saat pengumuman, namun koreksi ~42% dari puncak dalam 3 bulan terakhir.
+                </p>
+            </div>
+
+            <div class="grid-2 reveal" style="margin-top: 16px;">
+                <div class="card">
+                    <h4 style="font-size: 0.95rem; margin-bottom: 8px; color: var(--blue);">1. RI = Katalis Jangka Pendek</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7;">Harga naik saat isu muncul, bukan setelah RI selesai. <strong>Timing keluar</strong> lebih penting dari timing masuk.</p>
+                </div>
+                <div class="card">
+                    <h4 style="font-size: 0.95rem; margin-bottom: 8px; color: var(--blue);">2. Proses Bisa Molor</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7;">OJK review, antrean RI, dokumen — menyebabkan mundurnya timeline. Jangan panik, tapi jangan beli terlalu jauh dari cum date.</p>
+                </div>
+                <div class="card">
+                    <h4 style="font-size: 0.95rem; margin-bottom: 8px; color: var(--blue);">3. Kualitas Aset = Kunci</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7;">BUVA RI untuk survival. SINI bawa aset tambang riil + ekosistem Prajogo. <strong>Bedanya signifikan</strong> untuk jangka panjang.</p>
+                </div>
+                <div class="card">
+                    <h4 style="font-size: 0.95rem; margin-bottom: 8px; color: var(--blue);">4. Profit Taking Wajib</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7;">Jangan tahan terlalu lama setelah RI selesai. Setelah narrative-nya <strong>priced in</strong>, koreksi akan datang. Set target profit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="sep">
+
+    <!-- ACTION PLAN -->
+    <section id="action">
+        <div class="container">
+            <div class="reveal">
+                <div class="section-title">Action Plan Untukmu</div>
+                <div class="section-subtitle">Langkah konkret berdasarkan kondisimu saat ini.</div>
+            </div>
+
+            <div class="grid-3 reveal">
+                <div class="card" style="border-top: 3px solid var(--green);">
+                    <h4 style="font-size: 0.95rem; margin-bottom: 16px;">SUDAH PUNYA SINI</h4>
+                    <ul class="chk-list" style="color: var(--text-secondary);">
+                        <li><i class="ti ti-check c-green"></i> Tidak perlu aksi apapun sebelum cum date 8 Juli</li>
+                        <li><i class="ti ti-check c-green"></i> Siapkan dana tebus HMETD = (saham ÷ 2) × 3 × Rp 5.000</li>
+                        <li><i class="ti ti-check c-green"></i> Saat HMETD aktif (14–20 Juli) → tebus semua atau jual</li>
+                        <li><i class="ti ti-x c-red"></i> <strong>JANGAN biarkan HMETD hangus</strong></li>
+                    </ul>
+                </div>
+                <div class="card" style="border-top: 3px solid var(--blue);">
+                    <h4 style="font-size: 0.95rem; margin-bottom: 16px;">BELUM PUNYA SINI</h4>
+                    <ul class="chk-list" style="color: var(--text-secondary);">
+                        <li><i class="ti ti-arrow-right c-blue"></i> Entry bertahap di range Rp 8.000–10.000</li>
+                        <li><i class="ti ti-arrow-right c-blue"></i> Jangan all-in; sisakan modal untuk tebus HMETD</li>
+                        <li><i class="ti ti-arrow-right c-blue"></i> Set stop-loss jika IHSG semakin memburuk</li>
+                        <li><i class="ti ti-arrow-right c-blue"></i> Target profit 30–50% pasca-RI, jangan greedy</li>
+                    </ul>
+                </div>
+                <div class="card" style="border-top: 3px solid var(--gold);">
+                    <h4 style="font-size: 0.95rem; margin-bottom: 16px;">MASIH RAGU</h4>
+                    <ul class="chk-list" style="color: var(--text-secondary);">
+                        <li><i class="ti ti-arrow-right c-gold"></i> Tunggu MSCI review 19 & 24 Juni 2026</li>
+                        <li><i class="ti ti-arrow-right c-gold"></i> Jika MSCI aman → sentimen rebound → masuk moderat</li>
+                        <li><i class="ti ti-arrow-right c-gold"></i> Jika MSCI negatif → tunggu dust settle, entry lebih rendah</li>
+                        <li><i class="ti ti-arrow-right c-gold"></i> Gunakan <a href="https://anthropicstock.up.railway.app/simulator" target="_blank">simulator Anthropic Stock</a> untuk hitung skenario</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="sep">
+
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="container">
+            <div class="reveal">
+                <div class="section-title">FAQ — Pertanyaan yang Sering Muncul</div>
+            </div>
+
+            <div class="reveal">
+                <div class="card" style="margin-bottom: 12px;">
+                    <h4 style="font-size: 0.95rem; margin-bottom: 8px;">Apakah right issue ini bisa gagal?</h4>
+                    <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.75;">Sangat kecil kemungkinannya. PTRO sudah dikonfirmasi sebagai <strong>standby buyer</strong> — artinya semua saham baru yang tidak diambil pemegang saham lain akan diserap PTRO. Selain itu, pemegang saham pengendali (PT Autum Prima Indonesia, Batubara Development, Hapsoro) berkomitmen menebus minimal <strong>Rp 900 miliar</strong>.</p>
+                </div>
+                <div class="card" style="margin-bottom: 12px;">
+                    <h4 style="font-size: 0.95rem; margin-bottom: 8px;">Apakah harga saham pasti turun ke TERP setelah cum date?</h4>
+                    <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.75;">TERP adalah penyesuaian matematis — bukan "harga jatuh." Secara mekanisme, harga ex-rights memang akan menyesuaikan ke sekitar TERP. Namun harga pasar bisa di atas atau di bawah TERP tergantung supply-demand saat itu. Jika kamu tebus semua HMETD, nilai investasimu secara teoritis <strong>tidak berubah</strong> di TERP.</p>
+                </div>
+                <div class="card" style="margin-bottom: 12px;">
+                    <h4 style="font-size: 0.95rem; margin-bottom: 8px;">Saya sudah pegang SINI dari lama. Apa yang harus saya lakukan sekarang?</h4>
+                    <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.75;"><strong>Tidak perlu melakukan apa-apa sampai 14 Juli 2026</strong> (awal perdagangan HMETD). Selama kamu tercatat sebagai pemegang saham sebelum 10 Juli pukul 16:00 WIB, kamu otomatis mendapatkan HMETD. Yang perlu kamu lakukan: siapkan dana untuk tebus, atau rencanakan untuk jual HMETD saat periode aktif.</p>
+                </div>
+                <div class="card" style="margin-bottom: 12px;">
+                    <h4 style="font-size: 0.95rem; margin-bottom: 8px;">Berapa dana yang perlu saya siapkan untuk tebus HMETD?</h4>
+                    <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.75;">Rumusnya: <strong>(Jumlah saham ÷ 2) × 3 × Rp 5.000</strong>. Contoh: punya 2.000 lembar SINI → dapat 3.000 HMETD → biaya tebus = 3.000 × Rp 5.000 = <strong>Rp 15.000.000</strong>. Gunakan <a href="https://anthropicstock.up.railway.app/simulator" target="_blank">simulator Anthropic Stock</a> untuk perhitungan yang lebih detail.</p>
+                </div>
+                <div class="card" style="margin-bottom: 12px;">
+                    <h4 style="font-size: 0.95rem; margin-bottom: 8px;">Kenapa SINI beli aset yang masih merugi?</h4>
+                    <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.75;">KMS (melalui CEP) memiliki cadangan batu bara 82 juta ton di area 4.776 Ha. Saat ini masih merugi karena tahap pengembangan awal dan kendala infrastruktur. Namun dengan dukungan finansial pasca-RI (Rp 1,2T modal kerja) dan expertise grup Prajogo, potensi turn-around ada. Ini adalah <strong>investasi jangka panjang</strong> — membeli aset saat murah sebelum produksi dimaksimalkan.</p>
+                </div>
+                <div class="card">
+                    <h4 style="font-size: 0.95rem; margin-bottom: 8px;">Bagaimana prospek batu bara low-rank (3.900 kcal)?</h4>
+                    <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.75;">Batu bara low-rank memiliki margin lebih tipis dibanding high-calorie coal, tetapi <strong>demand dari PLTU domestik tetap tinggi</strong>. Indonesia sendiri masih mengandalkan batu bara untuk kebutuhan energi. Dengan volume besar (target 30 jt ton/tahun pada 2031) dan biaya operasional yang dikontrol, bisnis ini bisa profitable. Kuncinya adalah efisiensi operasional dan stripping ratio (6,7x untuk KMS — dalam range wajar).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="sep">
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-brand reveal">
+                <img src="data:image/png;base64,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" alt="Logo" style="height: 32px; width: auto; object-fit: contain;"> Anthropic Stock
+            </div>
+            <p class="reveal" style="margin-bottom: 16px;">Ditulis oleh <strong style="color: var(--text-secondary);">Jaydan</strong> · Anthropic Stock Research Team</p>
+            <p class="reveal">Laporan ini hanya untuk anggota VIP terdaftar. <strong>Bukan merupakan rekomendasi investasi.</strong> Semua keputusan investasi sepenuhnya menjadi tanggung jawab investor masing-masing.</p>
+            <div class="reveal" style="margin-top: 20px;">
+                <div class="section-label" style="background: rgba(255,255,255,0.05); color: var(--text-muted); font-size: 0.72rem;">📊 Data per 7 Juni 2026</div>
+            </div>
+            <p class="reveal" style="font-size: 0.72rem; opacity: 0.5; margin-top: 12px;">Sumber: BEI, OJK, Prospektus Ringkas SINI, Petrosea.com, Bareksa, Stockbit, CNBC Indonesia, Bisnis.com, Kontan.co.id</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- TERP Calculator ---
+        function calc() {
+            const P = parseInt(document.getElementById('iPrice').value);
+            const n = parseInt(document.getElementById('iShares').value);
+            const E = 5000;
+            const hmetd = Math.floor(n * 1.5);
+            const totalShares = n + hmetd;
+            const terp = (2 * P + 3 * E) / 5;
+            const hval = terp - E;
+            const cost = hmetd * E;
+            const inv = n * P + cost;
+            const porto = totalShares * terp;
+
+            document.getElementById('vPrice').textContent = rp(P);
+            document.getElementById('vShares').textContent = num(n);
+            document.getElementById('oTerp').textContent = rp(Math.round(terp));
+            document.getElementById('oHval').textContent = rp(Math.round(hval));
+            document.getElementById('oHget').textContent = num(hmetd);
+            document.getElementById('oCost').textContent = rp(cost);
+            document.getElementById('oInv').textContent = rp(Math.round(inv));
+            document.getElementById('oPort').textContent = rp(Math.round(porto));
+        }
+        function rp(v) { return 'Rp ' + v.toLocaleString('id-ID'); }
+        function num(v) { return v.toLocaleString('id-ID'); }
+
+        // --- Intersection Observer for Scroll Reveal ---
+        function initReveal() {
+            const els = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) {
+                        // Stagger animations slightly
+                        setTimeout(() => {
+                            entry.target.classList.add('visible');
+                        }, i * 60);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+            els.forEach(el => observer.observe(el));
+        }
+
+        // --- Parallax on Hero Background ---
+        function initParallax() {
+            const heroBg = document.getElementById('heroBg');
+            const heroGrid = document.getElementById('heroGrid');
+            let ticking = false;
+
+            window.addEventListener('scroll', function () {
+                if (!ticking) {
+                    window.requestAnimationFrame(function () {
+                        const scrollY = window.scrollY;
+                        if (scrollY < 800) {
+                            const offset = scrollY * 0.35;
+                            heroBg.style.transform = 'translateY(' + offset + 'px)';
+                            heroGrid.style.transform = 'translateY(' + (offset * 0.5) + 'px)';
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }, { passive: true });
+        }
+
+        // --- Card Glow Hover Effect ---
+        function initCardGlow() {
+            document.querySelectorAll('.card').forEach(card => {
+                card.addEventListener('mousemove', e => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    card.style.setProperty('--mouse-x', `${x}px`);
+                    card.style.setProperty('--mouse-y', `${y}px`);
+                });
+            });
+        }
+
+        // Init
+        window.addEventListener('DOMContentLoaded', function() {
+            calc();
+            initReveal();
+            initParallax();
+            initCardGlow();
+        });
+    </script>
+</body>
+</html>
